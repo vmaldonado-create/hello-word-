@@ -1,0 +1,113 @@
+<link rel="stylesheet" href="style.css">
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Homework 2 Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>About Me</h1>
+</header>
+
+<nav>
+    <ul>
+        <li>Home</li>
+        <li>Projects</li>
+        <li>Contact</li>
+    </ul>
+</nav>
+
+<main>
+
+<section class="container">
+
+    <article>
+        <h2>My Interests</h2>
+        <p>I enjoy learning technology and creating websites.</p>
+    </article>
+
+    <article>
+        <h2>My Goals</h2>
+        <p>I want to improve my coding and design skills.</p>
+    </article>
+
+    <article>
+        <h2>My Experience</h2>
+        <p>I am practicing HTML and CSS.</p>
+    </article>
+
+</section>
+
+</main>
+
+<footer>
+    <p>Created for Homework 2</p>
+</footer>
+
+</body>
+</html>
+/* Basic page styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header, footer {
+    padding: 20px;
+    text-align: center;
+}
+
+
+/* Navigation using Flexbox */
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+    padding: 15px;
+}
+
+
+/* Multi-column layout using Grid */
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+
+article {
+    padding: 20px;
+    border: 1px solid black;
+}
+
+
+/* Tablet layout: 768px */
+@media (max-width: 768px) {
+
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* Mobile layout: 320px */
+@media (max-width: 480px) {
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+}
